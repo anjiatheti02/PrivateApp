@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,102 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DynamicUI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Los-bt-7Fx">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="DynamicCell1" rowHeight="100" id="dI1-9P-P6h" customClass="DynamicCell1" customModule="DynamicUI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dI1-9P-P6h" id="rwA-BI-Sf8">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="79f-01-A95">
+                                                    <rect key="frame" x="20" y="26" width="374" height="48"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTP-Ge-aqr">
+                                                    <rect key="frame" x="352" y="34" width="32" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="32" id="0Lg-Ul-Rfu"/>
+                                                        <constraint firstAttribute="height" constant="30" id="gmI-X1-Vph"/>
+                                                    </constraints>
+                                                    <state key="normal" title="CBO"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="79f-01-A95" secondAttribute="trailing" id="BDY-hn-Qwl"/>
+                                                <constraint firstAttribute="trailing" secondItem="MTP-Ge-aqr" secondAttribute="trailing" constant="30" id="Kxt-1D-Prl"/>
+                                                <constraint firstItem="79f-01-A95" firstAttribute="top" secondItem="rwA-BI-Sf8" secondAttribute="topMargin" constant="15" id="Qmn-dA-uUC"/>
+                                                <constraint firstItem="79f-01-A95" firstAttribute="leading" secondItem="rwA-BI-Sf8" secondAttribute="leadingMargin" id="d7l-FF-cHJ"/>
+                                                <constraint firstItem="MTP-Ge-aqr" firstAttribute="firstBaseline" secondItem="79f-01-A95" secondAttribute="firstBaseline" id="dTI-f7-otd"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="79f-01-A95" secondAttribute="bottom" constant="15" id="k3k-re-Fic"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dropDownBtn" destination="MTP-Ge-aqr" id="EGi-Nc-2BH"/>
+                                            <outlet property="textField" destination="79f-01-A95" id="qaE-cg-6nH"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="DynamicCell2" rowHeight="260" id="4pQ-pm-qOQ" customClass="DynamicCell1" customModule="DynamicUI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="128" width="414" height="260"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4pQ-pm-qOQ" id="Bki-lM-tFT">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="260"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsVerticalScrollIndicator="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut ." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zxH-dr-bCL">
+                                                    <rect key="frame" x="20" y="26" width="374" height="208"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="E3v-0G-nzk"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="zxH-dr-bCL" secondAttribute="bottom" constant="15" id="1c2-Bv-ve4"/>
+                                                <constraint firstItem="zxH-dr-bCL" firstAttribute="leading" secondItem="Bki-lM-tFT" secondAttribute="leadingMargin" id="4fa-bf-NFr"/>
+                                                <constraint firstItem="zxH-dr-bCL" firstAttribute="top" secondItem="Bki-lM-tFT" secondAttribute="topMargin" constant="15" id="K4X-2h-6MN"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="zxH-dr-bCL" secondAttribute="trailing" id="m0C-vb-B4l"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="textView" destination="zxH-dr-bCL" id="Owe-B5-5LR"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="tkO-TY-FTz"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="mUN-Ul-bYz"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Los-bt-7Fx" secondAttribute="bottom" id="Ush-vr-TtJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Los-bt-7Fx" secondAttribute="trailing" id="WCk-iP-62T"/>
+                            <constraint firstItem="Los-bt-7Fx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gp2-pP-NV2"/>
+                            <constraint firstItem="Los-bt-7Fx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="laF-I3-1an"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="dynamicDataTV" destination="Los-bt-7Fx" id="3Ga-7V-Fcw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
 </document>

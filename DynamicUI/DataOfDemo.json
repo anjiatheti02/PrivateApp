@@ -1,0 +1,27 @@
+[
+    {
+        "name": "User Name",
+        "type": "TextArea"
+    },
+    {
+        "name": "Description",
+        "type": "TextView"
+    },
+    {
+        "name": "Gender",
+        "type": "DropDown"
+    },
+    {
+        "name": "Age",
+        "type": "TextArea"
+    },
+    {
+        "name": "DOB",
+        "type": "DTO"
+    },
+    {
+        "name": "EmailID",
+        "type": "TextArea"
+    }
+    
+]

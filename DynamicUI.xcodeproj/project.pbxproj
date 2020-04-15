@@ -13,9 +13,14 @@
 		844C4D6C23EAC7F000151109 /* DynamicUI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 844C4D6A23EAC7F000151109 /* DynamicUI.xcdatamodeld */; };
 		844C4D6E23EAC7F300151109 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844C4D6D23EAC7F300151109 /* Assets.xcassets */; };
 		844C4D7123EAC7F300151109 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844C4D6F23EAC7F300151109 /* LaunchScreen.storyboard */; };
+		844C4D7923EACA9C00151109 /* DataOfDemo.json in Resources */ = {isa = PBXBuildFile; fileRef = 844C4D7823EACA9C00151109 /* DataOfDemo.json */; };
+		844C4D7B23EACB1C00151109 /* DynamicDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844C4D7A23EACB1C00151109 /* DynamicDataModel.swift */; };
+		844C4D7D23EAD4D900151109 /* DynamicCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844C4D7C23EAD4D900151109 /* DynamicCell1.swift */; };
+		F9A0FFAC859740C7D404B0DC /* Pods_DynamicUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97173B11D0462D8787534A17 /* Pods_DynamicUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0AFACAAC859341732B23E322 /* Pods-DynamicUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamicUI.debug.xcconfig"; path = "Target Support Files/Pods-DynamicUI/Pods-DynamicUI.debug.xcconfig"; sourceTree = "<group>"; };
 		844C4D6023EAC7F000151109 /* DynamicUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		844C4D6323EAC7F000151109 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		844C4D6523EAC7F000151109 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +29,11 @@
 		844C4D6D23EAC7F300151109 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		844C4D7023EAC7F300151109 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		844C4D7223EAC7F300151109 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		844C4D7823EACA9C00151109 /* DataOfDemo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DataOfDemo.json; sourceTree = "<group>"; };
+		844C4D7A23EACB1C00151109 /* DynamicDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicDataModel.swift; sourceTree = "<group>"; };
+		844C4D7C23EAD4D900151109 /* DynamicCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicCell1.swift; sourceTree = "<group>"; };
+		97173B11D0462D8787534A17 /* Pods_DynamicUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DynamicUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5479CE77E48F225E61A3BC3 /* Pods-DynamicUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamicUI.release.xcconfig"; path = "Target Support Files/Pods-DynamicUI/Pods-DynamicUI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9A0FFAC859740C7D404B0DC /* Pods_DynamicUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19D21275A21CE4BE1F3AF178 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				97173B11D0462D8787534A17 /* Pods_DynamicUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6AD70391F422ADF692B5BA25 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0AFACAAC859341732B23E322 /* Pods-DynamicUI.debug.xcconfig */,
+				D5479CE77E48F225E61A3BC3 /* Pods-DynamicUI.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		844C4D5723EAC7F000151109 = {
 			isa = PBXGroup;
 			children = (
 				844C4D6223EAC7F000151109 /* DynamicUI */,
 				844C4D6123EAC7F000151109 /* Products */,
+				6AD70391F422ADF692B5BA25 /* Pods */,
+				19D21275A21CE4BE1F3AF178 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,7 +89,10 @@
 			children = (
 				844C4D6323EAC7F000151109 /* AppDelegate.swift */,
 				844C4D6523EAC7F000151109 /* ViewController.swift */,
+				844C4D7A23EACB1C00151109 /* DynamicDataModel.swift */,
+				844C4D7C23EAD4D900151109 /* DynamicCell1.swift */,
 				844C4D6723EAC7F000151109 /* Main.storyboard */,
+				844C4D7823EACA9C00151109 /* DataOfDemo.json */,
 				844C4D6D23EAC7F300151109 /* Assets.xcassets */,
 				844C4D6F23EAC7F300151109 /* LaunchScreen.storyboard */,
 				844C4D7223EAC7F300151109 /* Info.plist */,
@@ -74,9 +108,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 844C4D7523EAC7F300151109 /* Build configuration list for PBXNativeTarget "DynamicUI" */;
 			buildPhases = (
+				0B277A707AA00DD62726C9A3 /* [CP] Check Pods Manifest.lock */,
 				844C4D5C23EAC7F000151109 /* Sources */,
 				844C4D5D23EAC7F000151109 /* Frameworks */,
 				844C4D5E23EAC7F000151109 /* Resources */,
+				0A6EBE2D92FA34834831792C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,10 +164,53 @@
 				844C4D7123EAC7F300151109 /* LaunchScreen.storyboard in Resources */,
 				844C4D6E23EAC7F300151109 /* Assets.xcassets in Resources */,
 				844C4D6923EAC7F000151109 /* Main.storyboard in Resources */,
+				844C4D7923EACA9C00151109 /* DataOfDemo.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A6EBE2D92FA34834831792C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DynamicUI/Pods-DynamicUI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DynamicUI/Pods-DynamicUI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DynamicUI/Pods-DynamicUI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0B277A707AA00DD62726C9A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DynamicUI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		844C4D5C23EAC7F000151109 /* Sources */ = {
@@ -139,6 +218,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				844C4D6623EAC7F000151109 /* ViewController.swift in Sources */,
+				844C4D7D23EAD4D900151109 /* DynamicCell1.swift in Sources */,
+				844C4D7B23EACB1C00151109 /* DynamicDataModel.swift in Sources */,
 				844C4D6423EAC7F000151109 /* AppDelegate.swift in Sources */,
 				844C4D6C23EAC7F000151109 /* DynamicUI.xcdatamodeld in Sources */,
 			);
@@ -284,6 +365,7 @@
 		};
 		844C4D7623EAC7F300151109 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AFACAAC859341732B23E322 /* Pods-DynamicUI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -301,6 +383,7 @@
 		};
 		844C4D7723EAC7F300151109 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5479CE77E48F225E61A3BC3 /* Pods-DynamicUI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
